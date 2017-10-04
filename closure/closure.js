@@ -8,7 +8,7 @@ const batman = 'Bruce Wayne'
 function greetBatman() {
   return `Hello ${batman}`
 }
-console.log(greetBatman()) // Hello Bruce Wayne
+// console.log(greetBatman()) // Hello Bruce Wayne
 
 // Example 2
 
@@ -21,10 +21,10 @@ function Person (nameParam) {
 }
 
 const me = new Person ('Jack');
-console.log(me); // Person { getName: [Function] }
+// console.log(me); // Person { getName: [Function] }
 let _name = 'Alohaaa'
 // hàm getName() vẫn sẽ nhớ _name trong lexical scope cả nó - biến _name khi nó đc định nghĩa
-console.log(me.getName()); // Jack
+// console.log(me.getName()); // Jack
 
 // Example 3:
 // makeAdder(x) là 1 factory function nhận 1 tham số và trả về 1 hàm 
@@ -40,5 +40,6 @@ function makeAdder(x) {
 const add5 = makeAdder(5); // x là 5
 const add10 = makeAdder(10); // x là 10
 
-console.log(add5(2)); // 7
+console.log(add5(2)); // 7 
+console.log(makeAdder(5)(2)) // 7
 console.log(add10(2)); // 12

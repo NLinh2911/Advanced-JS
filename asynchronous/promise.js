@@ -26,3 +26,4 @@ const p3 = new Promise(function (resolve, reject) {
 })
 
 p3.then(res => console.log(res)).catch(err => console.log(err.message))
+

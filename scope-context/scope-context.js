@@ -42,10 +42,10 @@ const myObj = {
 // EXPLICIT BINDING
 // sử dụng apply, call, bind để gán context
 // call hay apply sẽ chạy hàm ngay lập tức sau khi gán object
-// myObj.myFunc.call({}) // this lúc này là {}. this.name là undefined
-// myObj.myFunc.call({name: 'object gắn qua call'}, 1, 2);
+myObj.myFunc.call({}) // this lúc này là {}. this.name là undefined
+myObj.myFunc.call({name: 'object gắn qua call'}, 1, 2);
 
-// myObj.myFunc.apply({name: 'object gắn qua apply'}, [1,2])
+myObj.myFunc.apply({name: 'object gắn qua apply'}, [1,2])
 
 // bind thì trả về 1 copy của hàm đó nhưng với this đc gắn với context mới
 // ví dụ dưới đây context mới chính là object ta truyền vào trong bind()
@@ -129,4 +129,6 @@ var order2 = {
 };
 
 const cookSushi = cook.call(order1);
+cookSushi()
 //cookSushi.call(order2); // 'sushi' k phải là 'bbq'
+
