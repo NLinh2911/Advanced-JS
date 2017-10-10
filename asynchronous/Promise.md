@@ -1,5 +1,5 @@
 # Async/Await thực tế là các promises
-
+[further reading](https://strongloop.com/strongblog/node-js-callback-hell-promises-generators/)
 * Mỗi hàm `async` sẽ trả về 1 promise. Khi `await` kết quả nhận đc chính là kết quả của promise 
 
 * Promise hứng kết quả dù đã đc trả về hay sẽ đc trả về trong tương lại trong phần `then()`

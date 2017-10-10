@@ -13,7 +13,7 @@ function callback_function(arg1, arg2, callback) {
 }
 
 // call the function
-callback_function('ee', 15, function (err, result) {
+callback_function(2, 15, function (err, result) {
   // this anonymous function will run when the callback is called
   if (err) {
     console.log(err);
