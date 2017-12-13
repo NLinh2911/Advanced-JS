@@ -32,16 +32,16 @@ var myFile = 'test.txt';
 fs.readFile(myFile, 'utf8', appendText);  
 
 // ==== PROMISE ==== 
-// var Promise = require('bluebird');  
-// var fs = require('fs');  
-// Promise.promisifyAll(fs);
+var Promise = require('bluebird');  
+var fs = require('fs');  
+Promise.promisifyAll(fs);
 
-// var myFile = 'test';  
-// fs.readFileAsync(myFile, 'utf8').then(function(txt) {  
-//     txt = txt + '\nAppended something!';
-//     fs.writeFile(myFile, txt);
-// }).then(function() {
-//     console.log('Appended text!');
-// }).catch(function(err) {
-//     console.log(err);
-// });
+var myFile = 'test';  
+fs.readFileAsync(myFile, 'utf8').then(function(txt) {  
+    txt = txt + '\nAppended something!';
+    fs.writeFile(myFile, txt);
+}).then(function() {
+    console.log('Appended text!');
+}).catch(function(err) {
+    console.log(err);
+});

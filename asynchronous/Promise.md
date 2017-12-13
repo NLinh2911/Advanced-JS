@@ -55,7 +55,15 @@ readFileAsync(filepath)
 ```
 
 ## Promise.all(): nhóm nhiều promises -> chạy logic trong then() khi tất cả promise trong mảng Promise.all([...]) hoàn thành
-
+```js
+// get both user and product info 
+  findUser().then((user) => {
+    findProduct().then((product) => {
+      return {user: user, product: product};
+    })
+  })
+}
+```
 ```js
 Promise.all([findUser(), findProduct()])
   .spread(function(user, product) { // trả về kết quả của mảng promise theo thứ tự

@@ -83,8 +83,8 @@ const jack = {
 //console.log(jack.jackTalk()); // Hi Jack
 jack.speak = talk;
 let jackSpeaking = jack.speak
-// console.log(jack.speak());
-// console.log(jackSpeaking());
+console.log(jack.speak());
+console.log(jackSpeaking());
 
 // Vấn đề với binding this: Implicit lost
 const talk2 = jack.talk;
